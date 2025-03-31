@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Common Elements */
+
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: fit-content;
+
+    font-family: helvetica;
+    background-color: #30c555;
+    padding: 20px;
+    overflow: hidden;
+}
+
+#navbar div {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+#navbar div ul {
+    display: inherit;
+    list-style-type: none;
+}
+
+#navButtons a {
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px;
+}
+
+#icon {
+    float: left;
+    height: 32px;
+    width: 32px;
+    padding: 25px;
+}
+
+#logo {
+    height: 48px;
+    width: 48px;
+}
+
+#footerNavbar {
+    float: left;
+    background-color: #30c555;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+}
+
+#footerNavbar a img {
+    height: 32px;
+    width: fit-content;
+    margin: 15px;
+}
+
+#navButtons a:hover{
+    background-color: #030303;
+}
+
+
+
+/* Landing */
+
+
+#welcome {
+    background-color: rgba(66, 105, 67, 0.979);
+    background-image: url("/images/Pattern.png");
+    background-size: 2.5rem 2.5rem;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-items: space-between;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    animation-duration: 2s;
+}
+
+#welcome:hover{
+
+    background-color: #ffffff;
+}
+
+#welcome h1 {
+    font-size: 48pt;
+}
+
+#welcome p{
+    font-size: 24pt;
+}
+
+#welcome section {
+    padding: 10px;
+    color: white;
+    display: flexbox;
+    width: 40%;
+}
+
+#welcome img {
+    margin: 5px;
+    height: 355px;
+}
+
+#Collections{
+    display: block;
+    align-items: center;
+    text-align: center;
+    height: min-content;
+}  
+
+#Collections h2, button{
+    margin: 20px;
+}
+
+/* Collections Page */
+
+
+
+/* Common */
+
+#departments{
+    display: flex;
+    background-color: #030303;
+    justify-content: space-evenly;
+    margin: 0px;
+}
+
+.departmentContainer{
+    background-color: #30c555;
+    border-style: solid;
+    border-width: 3px; /* Llevará imagen de fondo, pero pongo border por ahora */
+    border-color: #030303;
+    flex-grow: 1;
+    text-align: center;
+    padding: 20px;
+    height: 320px;
+}
+
+
+#centeredTitle{
+    text-align: center;
+    padding: 20px;
+}
+
+body {
+    background-color: #30c555;
+    align-items: center;
+}
+
+main{
+    background-color: #073312;
+}
+
+button{
+    padding: 5px;
+    background-color: white;
+    border: none;
+}
+
+.questionnaire{
+    background-color: #dbffe2;
+    text-align: center;
+}
+
+.questionnaire > * {
+    color: #030303;
+}
+
+.questionnaire h1,h2{
+    padding: 20px;
+}
+
+
+#emailInput{
+    width: 50%;
+    height: 25px;
+    margin: 20px;
+}
+
+#shortInput{
+    width: 25%;
+    height: 25px;
+}
+
+#longText{
+    width: 70%;
+    height: 20rem;
+    margin: 15px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    font-family: Helvetica;
+    color: white;
+}
+
+a{
+    font-family: Helvetica;
+    text-decoration: none;
+    color: white;
+}
