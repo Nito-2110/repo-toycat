@@ -12,7 +12,6 @@
     justify-content: center;
     align-items: center;
     min-height: fit-content;
-
     font-family: helvetica;
     background-color: #30c555;
     padding: 20px;
@@ -88,8 +87,17 @@
 }
 
 #welcome:hover{
-
     background-color: #ffffff;
+    color: #030303;
+    h1 font
+}
+
+#welcome:hover h1{
+    font-size: 52pt;
+}
+
+#welcome:hover p{
+    font-size: 28pt;
 }
 
 #welcome h1 {
@@ -102,7 +110,6 @@
 
 #welcome section {
     padding: 10px;
-    color: white;
     display: flexbox;
     width: 40%;
 }
@@ -154,62 +161,9 @@
 }
 
 body {
-    background-color: #30c555;
-    align-items: center;
-}
-
-main{
-    background-color: #073312;
-}
-
-button{
-    padding: 5px;
-    background-color: white;
-    border: none;
-}
-
-.questionnaire{
-    background-color: #dbffe2;
-    text-align: center;
-}
-
-.questionnaire > * {
-    color: #030303;
-}
-
-.questionnaire h1,h2{
-    padding: 20px;
-}
-
-
-#emailInput{
-    width: 50%;
-    height: 25px;
-    margin: 20px;
-}
-
-#shortInput{
-    width: 25%;
-    height: 25px;
-}
-
-#longText{
-    width: 70%;
-    height: 20rem;
-    margin: 15px;
-}
-
-p,
-h1,
-h2,
-h3,
-h4 {
-    font-family: Helvetica;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(13, 99, 38);
     color: white;
 }
 
-a{
-    font-family: Helvetica;
-    text-decoration: none;
-    color: white;
-}
+/*# sourceMappingURL=style.css.map */
