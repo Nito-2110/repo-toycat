@@ -75,7 +75,7 @@
 
 #welcome {
     background-color: rgba(66, 105, 67, 0.979);
-    background-image: url("/images/Pattern.png");
+    background-image: url("images/Pattern.png");
     background-size: 2.5rem 2.5rem;
     background-blend-mode: multiply;
     display: flex;
