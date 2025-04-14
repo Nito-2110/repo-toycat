@@ -221,7 +221,7 @@ de aprender o de hacer la grid responsiva en movil :( */
     justify-items: center;
     justify-content: space-around;
     margin: 200px 15%;
-    gap: 50px;
+    gap: 100px;
 }
 
 .questions {
@@ -259,11 +259,32 @@ de aprender o de hacer la grid responsiva en movil :( */
 }
 
 
+/*Privacy Policy Page*/
+
+.privacyPolicy {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 30%;
+    gap: 4vh;
+}
+
+.privacyBullet h1 {
+    font-size: 36px;
+}
+
+.privacyBullet p {
+    max-width: 90%;
+    font-size: 20px;
+}
+
+#privacyTitle {
+    font-size: 48px;
+}
+
 /*Common stuff*/
 
 h1 {
     font-size: 72px;
-    text-align: center;
 }
 
 h2 {
@@ -326,20 +347,41 @@ button:hover {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .questionContainer{
-        min-height: 1git0rem;
+    .questionContainer {
+        min-height: 10rem;
     }
 
-    #question{
+    #question {
         font-size: 1.3rem;
     }
 
-    #answer{
+    #answer {
         font-size: 1rem;
     }
 
     button {
         width: fit-content;
+        font-size: 16px;
+    }
+
+
+    /*Privacy Policy Page*/
+    .privacyPolicy {
+        display: flex;
+        flex-direction: column;
+        padding: 80px 10%;
+        gap: 4vh;
+    }
+
+    #privacyTitle{
+        font-size: 28px;
+    }
+
+    .privacyBullet h1 {
+        font-size: 20px;
+        text-align: left;
+    }
+    .privacyBullet p{
         font-size: 16px;
     }
 }
