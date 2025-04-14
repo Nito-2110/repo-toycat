@@ -2,165 +2,245 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Common Elements */
-
-
-#navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: fit-content;
-    font-family: helvetica;
-    background-color: #30c555;
-    padding: 20px;
-    overflow: hidden;
-}
-
-#navbar div {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-}
-
-#navbar div ul {
-    display: inherit;
-    list-style-type: none;
-}
-
-#navButtons a {
-    text-align: center;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 20px;
-}
-
-#icon {
-    float: left;
-    height: 32px;
-    width: 32px;
-    padding: 25px;
-}
-
-#logo {
-    height: 48px;
-    width: 48px;
-}
-
-#footerNavbar {
-    float: left;
-    background-color: #30c555;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    padding: 20px;
-}
-
-#footerNavbar a img {
-    height: 32px;
-    width: fit-content;
-    margin: 15px;
-}
-
-#navButtons a:hover{
-    background-color: #030303;
-}
-
-
-
-/* Landing */
-
-
-#welcome {
-    background-color: rgba(66, 105, 67, 0.979);
-    background-image: url("images/Pattern.png");
-    background-size: 2.5rem 2.5rem;
-    background-blend-mode: multiply;
-    display: flex;
-    justify-items: space-between;
-    justify-content: center;
-    align-items: center;
-    padding: 60px;
-    animation-duration: 2s;
-}
-
-#welcome:hover{
-    background-color: #ffffff;
-    color: #030303;
-}
-
-#welcome:hover h1{
-    font-size: 52pt;
-}
-
-#welcome:hover p{
-    font-size: 28pt;
-}
-
-#welcome h1 {
-    font-size: 48pt;
-}
-
-#welcome p{
-    font-size: 24pt;
-}
-
-#welcome section {
-    padding: 10px;
-    display: flexbox;
-    width: 40%;
-}
-
-#welcome img {
-    margin: 5px;
-    height: 355px;
-}
-
-#Collections{
-    display: block;
-    align-items: center;
-    text-align: center;
-    height: min-content;
-}  
-
-#Collections h2, button{
-    margin: 20px;
-}
-
-/* Collections Page */
-
-
-
-/* Common */
-
-#departments{
-    display: flex;
-    background-color: #030303;
-    justify-content: space-evenly;
-    margin: 0px;
-}
-
-.departmentContainer{
-    background-color: #30c555;
-    border-style: solid;
-    border-width: 3px; /* Llevará imagen de fondo, pero pongo border por ahora */
-    border-color: #030303;
-    flex-grow: 1;
-    text-align: center;
-    padding: 20px;
-    height: 320px;
-}
-
-
-#centeredTitle{
-    text-align: center;
-    padding: 20px;
-}
-
-body {
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(13, 99, 38);
+    /*border: 2px solid red;*/
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    position: relative;
+    background-color: rgb(196, 250, 196);
+}
+
+.headerContainer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.headerContainer ul{
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.headerContainer a {
+    text-decoration: none;
+    color: black;
+}
+
+#Logo{
+    height: 70px; 
+}
+
+/*Landing*/
+
+.welcome{
+    display: flex;
+    padding: 100px 5%;
+    gap: 30px;
+    align-items: center;
+    text-align: left;
+}
+
+.welcomebuttons{
+    width: 40%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.welcomebuttons h1{
+    text-align: left;
+}
+
+.welcome img{
+    max-height: 500px;
+}
+
+.salmonCollage{
+    position: relative;
+    width: 50%; 
+    height: 800px;
+}
+
+.salmonCollage img{
+    position: absolute;
+    height: auto;
+    transition: transform 0.3s
+}
+
+.collageImg1{
+    top: 0;
+    left: 5%;
+    z-index: 3;
+    max-width: 60%;
+}
+
+.collageImg2{
+    top: 10%;
+    left: 30%;
+    z-index: 1;
+    width: 70%;
+    transform: rotate(15deg);
+}
+.collageImg3{
+    top: 50%;
+    left: 15%;
+    z-index: 2;
+    width: 50%;
+    transform: rotate(-10deg);
+}
+
+/*Animaciones para welcome*/
+.collageImg1:hover{
+    transform: scale(1.2) rotate(-10deg);
+}
+
+.collageImg2:hover{
+    transform: scale(1.2) rotate(25deg);
+}
+
+.collageImg3:hover{
+    transform: scale(1.2) rotate(15deg);
+}
+
+/*Products Grid (will replace images eventually)*/
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+  /* border: 2px solid red;/* /*turn off for debug*/ 
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.containerTitle{
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 0px 10px;
+}
+
+.containerImage{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red;*/  /*turn off for debug*/
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.hoverImgContainer {
+    position: relative;
+    width: 80%;
+    max-width: 300px;
+    height: 400px;
+    align-items: center;
+}
+  
+/*.hoverImgContainer h2{
+    position: absolute;
+    text-align: center;
+}*/
+
+.hoverImgContainer img {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hoverImgContainer img.hoverImage {
+    opacity: 0;
+}
+  
+.hoverImgContainer:hover img.hoverImage {
+    opacity: 1;
+}
+  
+.hoverImgContainer:hover img.defaultImage{
+    opacity: 0;
+}
+
+/*FAQ*/
+
+.FAQ{
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+    margin: 200px;
+    gap: 50px;
+}
+
+.questions{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 80%;
+    height: 80%;
+}
+
+.questionContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 25px 30px;
+    border-radius: 30px;
+    gap: 15px;
+    background-color:  rgb(196, 250, 196);
+}
+
+#question{
+    text-align: center;
+    font-size: 2.5rem;
+
+}
+
+#answer{
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+
+/*Common stuff*/
+
+h1{
+    font-size: 72px;
+    text-align: center;
+}
+
+h2{
+    font-size: 36px;
+}
+
+button{
+    width: fit-content;
+    font-size: 20px;
     color: white;
+    padding: 20px;
+    background-color: black;
+    border: none;
+    border-radius: 20px;
+}
+
+button:hover{
+    transform: scale(1.05);
+    transition:  0.3s;
 }
