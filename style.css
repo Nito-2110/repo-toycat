@@ -3,9 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Komet", sans-serif;
     /*border: 2px solid red;*/
 }
+
+/*Header*/
 
 .navbar{
     display: flex;
@@ -38,6 +40,11 @@
 
 #Logo{
     height: 70px; 
+    transition: transform 0.3s;
+}
+
+#Logo:hover{
+    transform: scale(1.2);
 }
 
 /*Landing*/
@@ -114,22 +121,36 @@
 
 /*Products Grid (will replace images eventually) - Idealmente se haria un carrusel para mobil, pero no me ha alcanzado el tiempo de aprender*/
 
+.catalogue{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(196, 250, 196, .5);
+    padding:100px 0px;
+}
+
 .container{
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  grid-template-rows: repeat(minmax(300px,1fr), minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
   /* border: 2px solid red;/* /*turn off for debug*/ 
   align-items: center;
   justify-content: space-evenly;
-  max-width: 100%;
+  max-width: 1100px;
   margin: 20px 15%;
-  gap: 30px;
+  gap: 1rem;
 }
 
 .containerTitle{
     grid-column: 1 / -1;
     text-align: center;
     padding: 0px 10px;
+    font-weight: 700;
+    font-size: 4rem;
+    margin: 0px 200px 100px 200px;
+}
+
+.containerTitle{
+    font-size: 86px;
 }
 
 .containerImage{
@@ -137,37 +158,43 @@
     flex-direction: column;
     /* border: 2px solid red;*/  /*turn off for debug*/
     align-items: center;
-    justify-items: start;
+    justify-content: start;
     text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    max-width: 300px;
+    max-height: 40vh;
 }
 
 .hoverImgContainer {
+    display: flex;
     position: relative;
+    aspect-ratio: 3 / 4;
     width: 100%;
     max-width: 300px;
-    height: 40vh;
+    height: auto;
     align-items: center;
+    justify-content: start;
+    overflow: hidden;
 }
 
 .hoverImgContainer img {
     position: absolute;
     width: 100%;
-    height: 70%;
+    max-height: 100%;
     object-fit: contain;
-    top: 0;
-    left: 0;
+    padding: 20px;
     transition: opacity 0.5s ease;
 }
 
 .productTitle {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    width: 90%;
     font-size: 24px;
+    font-weight: 100;
     text-align: center;
     padding: 10px 0;
-    margin: 0;
-  }
+}
 
 .hoverImgContainer img.hoverImage {
     opacity: 0;
@@ -199,7 +226,7 @@
     grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    max-width: 80%;
+    max-width: fit-content;
     height: 80%;
 }
 
@@ -209,19 +236,22 @@
     justify-content: start;
     padding: 25px 30px;
     border-radius: 30px;
-    gap: 15px;
+    gap: 30px;
     background-color:  rgb(196, 250, 196);
 }
 
 #question{
     text-align: center;
-    font-size: 2.5rem;
-
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 #answer{
     text-align: left;
     font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: rgb(0,0,0,.90) ;
 }
 
 
@@ -236,6 +266,14 @@ h2{
     font-size: 36px;
 }
 
+a{
+    transition:  0.3s;
+}
+
+a:hover{
+    opacity: .7; 
+}
+
 button{
     width: fit-content;
     font-size: 20px;
@@ -244,10 +282,31 @@ button{
     background-color: black;
     border: none;
     border-radius: 20px;
+    transition:  0.3s;
 }
 
 button:hover{
     transform: scale(1.05);
-    transition:  0.3s;
+}
+
+@media (min-width: 1000px) {
+    .container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+  
+    .productTitle {
+    font-size: 0.9rem;
+  }
+
+  .containerTitle {
+    font-size: 2.5rem;
+    margin: 0 20px 60px;
+  }
 }
 
