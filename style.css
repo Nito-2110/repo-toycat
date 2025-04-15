@@ -458,6 +458,36 @@ de aprender o de hacer la grid responsiva en movil :( */
     height: fit-content;
 }
 
+/*About Us*/
+
+.aboutMe{
+    display: flex;
+    padding: 100px 20%;
+    align-items: center;
+}
+
+.aboutMe .textContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 3vw;
+    gap: 2vh;
+}
+
+.aboutMe .textContainer h1{
+    font-size: 8rem;
+}
+.aboutMe .textContainer h2{
+    font-size: 4rem;
+}
+
+
+.aboutMe img{
+    width: 40%;
+    height: auto;
+    border-radius: 20px;
+    aspect-ratio: 1/1;
+}
+
 /*Common stuff*/
 
 h1 {
