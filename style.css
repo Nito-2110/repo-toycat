@@ -7,7 +7,7 @@
     /*border: 2px solid red;*/
 }
 
-/*Header*/
+/*Header & Footer*/
 
 .navbar {
     display: flex;
@@ -25,7 +25,7 @@
     transform: translateX(-50%);
 }
 
-.headerContainer ul {
+.navbar div ul {
     display: flex;
     gap: 30px;
     list-style-type: none;
@@ -33,9 +33,23 @@
     padding: 0;
 }
 
-.headerContainer a {
+.navbar div a {
     text-decoration: none;
     color: black;
+}
+
+footer {
+    width: 100vw;
+    background-color: rgb(196, 250, 196);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    text-align: center;
+}
+
+.footerContainer ul li a {
+    font-weight: 700;
 }
 
 #Logo {
@@ -51,6 +65,12 @@
 
 .welcome {
     display: flex;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(./images/salmonBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     padding: 100px 15%;
     gap: 30px;
     align-items: center;
@@ -66,6 +86,8 @@
 
 .welcomebuttons h1 {
     text-align: left;
+    color: white;
+    text-shadow: 2px 2px 2px 2px black;
 }
 
 .welcome img {
@@ -129,6 +151,14 @@ de aprender o de hacer la grid responsiva en movil :( */
     align-items: center;
     background-color: rgb(196, 250, 196, .5);
     padding: 100px 0px;
+    gap: 50px;
+    text-align: center;
+}
+
+.catalogue a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .container {
@@ -136,9 +166,9 @@ de aprender o de hacer la grid responsiva en movil :( */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     /* border: 2px solid red;/* /*turn off for debug*/
     align-items: center;
-    justify-content: space-evenly;
+    justify-items: center;
     max-width: 1100px;
-    margin: 20px 15%;
+    margin: 20px auto;
     gap: 1rem;
 }
 
@@ -161,12 +191,13 @@ de aprender o de hacer la grid responsiva en movil :( */
     /* border: 2px solid red;*/
     /*turn off for debug*/
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     text-align: center;
     background-color: white;
     border-radius: 20px;
     padding-bottom: 20px;
-    max-width: 300px;
+    min-height: 400px;
+    width: 100%;
     max-height: 40vh;
 }
 
@@ -178,7 +209,7 @@ de aprender o de hacer la grid responsiva en movil :( */
     max-width: 300px;
     height: auto;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     overflow: hidden;
 }
 
@@ -189,6 +220,12 @@ de aprender o de hacer la grid responsiva en movil :( */
     object-fit: contain;
     padding: 20px;
     transition: opacity 0.5s ease;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .productTitle {
@@ -258,27 +295,167 @@ de aprender o de hacer la grid responsiva en movil :( */
     color: rgb(0, 0, 0, .90);
 }
 
+/*Collections / Products Page*/
 
-/*Privacy Policy Page*/
 
-.privacyPolicy {
+.featured {
+    position: relative;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(./images/salmonBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    text-align: center;
+    height: 90vh;
+    padding: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.featured h1 {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    font-size: 6rem;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.collageImages {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.featured .collageImg1 {
+    z-index: 2;
+}
+
+.featured .collageImg2 {
+    z-index: 1;
+}
+
+.featured .collageImg3 {
+    z-index: 3;
+}
+
+/*Animation on load*/
+
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.featured .collageImg1,
+.featured .collageImg2,
+.featured .collageImg3 {
+    position: static;
+    max-width: 400px;
+    animation: slideUpFade 1s ease-out forwards;
+    opacity: 0;
+}
+
+.featured .collageImg1 {
+    transform: rotate(-10deg);
+    animation-delay: 0.2s;
+    z-index: 1;
+}
+
+.featured .collageImg2 {
+    transform: rotate(0deg) scale(1.1);
+    animation-delay: 0.4s;
+    z-index: 2;
+}
+
+.featured .collageImg3 {
+    transform: rotate(10deg);
+    z-index: 1;
+}
+
+/*Products Grid*/
+
+.collections .container .containerImage {
+    background-color: rgb(196, 250, 196);
+    border-radius: 20px;
+}
+
+.collections .container {
+    padding: 100px 0px 0px 0px;
+}
+
+/*Privacy Policy & FAQ Page*/
+
+.textContainer {
     display: flex;
     flex-direction: column;
     padding: 80px 30%;
     gap: 4vh;
 }
 
-.privacyBullet h1 {
+.bullet {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bullet h1 {
     font-size: 36px;
 }
 
-.privacyBullet p {
+.bullet p {
     max-width: 90%;
     font-size: 20px;
 }
 
-#privacyTitle {
+#title {
     font-size: 48px;
+}
+
+.textContainer #cuestionnaire {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    background-color: rgb(196, 250, 196);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+#cuestionnaire h1{
+    font-size: 36px;
+}
+
+#cuestionnaire input {
+    border-color: black;
+    border-style: solid;
+    border-radius: 20px;
+    width: 100%;
+    height: 20vh;
+    text-align: start;
+}
+
+#cuestionnaire button{
+    padding: 2% 0%;
+    width: 30%;
+    font-size: 1rem;
+    height: fit-content;
 }
 
 /*Common stuff*/
@@ -365,23 +542,77 @@ button:hover {
     }
 
 
-    /*Privacy Policy Page*/
-    .privacyPolicy {
+    /*Collections Page*/
+    .collageImages {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+    }
+
+    .featured .collageImg1,
+    .featured .collageImg2,
+    .featured .collageImg3 {
+        position: absolute;
+        max-width: 60vw;
+        opacity: 1;
+        animation: none;
+    }
+
+    .featured .collageImg1 {
+        transform: translate(-50%, -50%) rotate(-8deg);
+        top: 50%;
+        left: 25%;
+        z-index: 1;
+    }
+
+    .featured .collageImg2 {
+        transform: translate(-50%, -50%) rotate(0deg);
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+    }
+
+    .featured .collageImg3 {
+        transform: translate(-50%, -50%) rotate(8deg);
+        top: 50%;
+        left: 75%;
+        z-index: 1;
+    }
+
+    .featured h1 {
+        font-size: 3rem;
+    }
+
+    .collections .container {
+        padding: 10px 0px 0px 0px;
+        gap: 5vw;
+    }
+
+    .collections .container .containerImage {
+        max-height: 8vw;
+    }
+
+    /*Privacy Policy Page & FAQ*/
+    .textContainer {
         display: flex;
         flex-direction: column;
         padding: 80px 10%;
         gap: 4vh;
     }
 
-    #privacyTitle{
+    #title {
         font-size: 28px;
     }
 
-    .privacyBullet h1 {
+    .bullet h1 {
         font-size: 20px;
         text-align: left;
     }
-    .privacyBullet p{
+
+    .bullet p {
         font-size: 16px;
     }
 }
