@@ -468,6 +468,8 @@ de aprender o de hacer la grid responsiva en movil :( */
     padding: 0px 10vw;
     gap: 5%;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-image: url(images/houseBg.png);
 }
 
 .aboutMe .textContainer{
@@ -475,13 +477,21 @@ de aprender o de hacer la grid responsiva en movil :( */
     flex-direction: column;
     padding: 0px 0vw;
     gap: 10%;
+    max-height: 40%;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 
 .aboutMe .textContainer h1{
-    font-size: 18vw;
+    font-size: 10em;
+    color: white;
 }
 .aboutMe .textContainer h2{
-    font-size: 8vw;
+    font-size: 6em;
+    color: white;
+}
+.aboutMe .textContainer p{
+    font-size: 1.5em;
+    color: white;
 }
 
 
