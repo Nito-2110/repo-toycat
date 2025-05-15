@@ -39,7 +39,7 @@
 }
 
 footer {
-    width: 100vw;
+    width: 100%;
     background-color: rgb(196, 250, 196);
     display: flex;
     justify-content: center;
@@ -167,8 +167,9 @@ de aprender o de hacer la grid responsiva en movil :( */
     /* border: 2px solid red;/* /*turn off for debug*/
     align-items: center;
     justify-items: center;
-    max-width: 1100px;
+    max-width: 100%;
     margin: 20px auto;
+    padding: 5% 0;
     gap: 1rem;
 }
 
@@ -462,27 +463,30 @@ de aprender o de hacer la grid responsiva en movil :( */
 
 .aboutMe{
     display: flex;
-    padding: 100px 20%;
+    height: 90vh;
+    max-width: 100%;
+    padding: 0px 10vw;
+    gap: 5%;
     align-items: center;
 }
 
 .aboutMe .textContainer{
     display: flex;
     flex-direction: column;
-    padding: 0px 3vw;
-    gap: 2vh;
+    padding: 0px 0vw;
+    gap: 10%;
 }
 
 .aboutMe .textContainer h1{
-    font-size: 8rem;
+    font-size: 18vw;
 }
 .aboutMe .textContainer h2{
-    font-size: 4rem;
+    font-size: 8vw;
 }
 
 
 .aboutMe img{
-    width: 40%;
+    max-width: 40%;
     height: auto;
     border-radius: 20px;
     aspect-ratio: 1/1;
@@ -586,6 +590,11 @@ button:hover {
         background-color: rgb(196, 250, 196);
         width: 100%;
     }
+
+    #header .navbar .headerContainer{
+        display: none;
+        
+    }
     
     .navbar div ul {
         display: flex;
@@ -634,14 +643,6 @@ button:hover {
         max-height: 10rem;
         padding: 30px;
         gap: 20px;
-    }
-
-    #question {
-        font-size: 1.3rem;
-    }
-
-    #answer {
-        font-size: 1rem;
     }
 
     button {
@@ -711,7 +712,7 @@ button:hover {
         gap: 4vh;
     }
 
-    #title {
+    .title {
         font-size: 28px;
     }
 
