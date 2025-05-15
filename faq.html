@@ -14,16 +14,28 @@
 <body>
     <header>
         <div class="navbar">
+            <input type="checkbox" id="menu-toggle" />
+
             <a href="index.html"><img id="Logo" src="./images/toycatLogo.png" alt="Logo"></a>
+
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
             <div class="headerContainer">
                 <ul>
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./collections.html">All Products</a></li>
                     <li><a href="./faq.html">FAQ</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
                 </ul>
             </div>
-            <a href="./cart.html"><img src="./images/shoppingCart.svg" alt="Cart"></a>
+
+            <a href="./cart.html" id="cartIcon">
+                <img src="./images/shoppingCart.svg" alt="Cart">
+            </a>
         </div>
     </header>
 
@@ -33,7 +45,8 @@
         <div class="bullet">
             <h1 class="title">FAQ</h1>
             <p>As we mentioned, we all have questions! But with our busy team responding to every single
-                one would take eons, so feel free to browse here and check if your question has been answered already!</p>
+                one would take eons, so feel free to browse here and check if your question has been answered already!
+            </p>
             <p>Or for more specific stuff, fill scroll all the way down to get in contact with us!</p>
             <a href="#cuestionnaire"> <button>Go down</button></a>
         </div>
@@ -41,43 +54,52 @@
         <div class="bullet">
             <h1>How long do shipments take?</h1>
             <p>We usually ship an item <strong> 2 - 3 weeks </strong> after the order has been placed.</p>
-            <p>After shipping, delivery usually takes about 2 weeks depending on your location, all of our items ship from the UK.</p>
+            <p>After shipping, delivery usually takes about 2 weeks depending on your location, all of our items ship
+                from the UK.</p>
         </div>
 
         <div class="bullet">
             <h1>Do you ship internationally? / How can I track my order?</h1>
-            <p>We ship to all countries available in DHL! </p> 
-            <p>Whenever you place an order, a receipt with a tracking number will be sent to the e-mail you put your order to! Follow the instructions
+            <p>We ship to all countries available in DHL! </p>
+            <p>Whenever you place an order, a receipt with a tracking number will be sent to the e-mail you put your
+                order to! Follow the instructions
                 from DHL in your browser of preference!
             </p>
         </div>
 
         <div class="bullet">
             <h1>Can I change or cancel my order after placing it?</h1>
-            <p>We totally get it — sometimes you hit "buy" a little too fast! While we can’t guarantee changes after the order’s placed (our team moves quick!), shoot us an email <em>as soon as possible</em> and we’ll do our best to help before it ships out.</p>
-          </div>
-          
-          <div class="bullet">
+            <p>We totally get it — sometimes you hit "buy" a little too fast! While we can’t guarantee changes after the
+                order’s placed (our team moves quick!), shoot us an email <em>as soon as possible</em> and we’ll do our
+                best to help before it ships out.</p>
+        </div>
+
+        <div class="bullet">
             <h1>What is your return policy?</h1>
-            <p>If something’s not quite right, no worries! We accept returns within 30 days of delivery — as long as the item is unworn, unwashed, and still in its original condition. Just reach out to our support team and they’ll guide you through the process.</p>
-          </div>
-          
-          <div class="bullet">
+            <p>If something’s not quite right, no worries! We accept returns within 30 days of delivery — as long as the
+                item is unworn, unwashed, and still in its original condition. Just reach out to our support team and
+                they’ll guide you through the process.</p>
+        </div>
+
+        <div class="bullet">
             <h1>My item arrived damaged — what should I do?</h1>
             <p>If your item showed up damaged, send us a photo and your order number — we’ll make it right ASAP.</p>
-          </div>
-          
-          <div class="bullet">
-            <h1>What sizes are available?</h1>
-            <p>Most items come in sizes XS through 3XL (sometimes even more)! You can check the product page for a size chart to find your perfect fit. If you’re between sizes, we usually suggest sizing up for that cozy feel.</p>
-          </div>
-          
-          <div class="bullet">
-            <h1>Will the design fade or peel after washing?</h1>
-            <p>Nope! As long as you follow the care instructions (like cold wash, inside out, low heat drying), your design should stay looking fresh for the long haul. We use high-quality printing made to last.</p>
-          </div>
+        </div>
 
-          <div id="cuestionnaire">
+        <div class="bullet">
+            <h1>What sizes are available?</h1>
+            <p>Most items come in sizes XS through 3XL (sometimes even more)! You can check the product page for a size
+                chart to find your perfect fit. If you’re between sizes, we usually suggest sizing up for that cozy
+                feel.</p>
+        </div>
+
+        <div class="bullet">
+            <h1>Will the design fade or peel after washing?</h1>
+            <p>Nope! As long as you follow the care instructions (like cold wash, inside out, low heat drying), your
+                design should stay looking fresh for the long haul. We use high-quality printing made to last.</p>
+        </div>
+
+        <div id="cuestionnaire">
             <h1>Send us a message over here!</h1>
             <input type="text">
             <button>Send!</button>

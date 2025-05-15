@@ -15,16 +15,28 @@
 
     <header>
         <div class="navbar">
+            <input type="checkbox" id="menu-toggle" />
+
             <a href="index.html"><img id="Logo" src="./images/toycatLogo.png" alt="Logo"></a>
+
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
             <div class="headerContainer">
                 <ul>
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./collections.html">All Products</a></li>
                     <li><a href="./faq.html">FAQ</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
                 </ul>
             </div>
-            <a href="./cart.html"><img src="./images/shoppingCart.svg" alt="Cart"></a>
+
+            <a href="./cart.html" id="cartIcon">
+                <img src="./images/shoppingCart.svg" alt="Cart">
+            </a>
         </div>
     </header>
 

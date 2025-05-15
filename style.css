@@ -9,6 +9,28 @@
 
 /*Header & Footer*/
 
+#menu-toggle {
+    display: none;
+}
+
+/* Menu Hamburguesa */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    background: black;
+    border-radius: 2px;
+}
+
 .navbar {
     display: flex;
     flex-direction: row;
@@ -439,7 +461,7 @@ de aprender o de hacer la grid responsiva en movil :( */
     border-radius: 20px;
 }
 
-#cuestionnaire h1{
+#cuestionnaire h1 {
     font-size: 36px;
 }
 
@@ -452,7 +474,7 @@ de aprender o de hacer la grid responsiva en movil :( */
     text-align: start;
 }
 
-#cuestionnaire button{
+#cuestionnaire button {
     padding: 2% 0%;
     width: 30%;
     font-size: 1rem;
@@ -461,45 +483,98 @@ de aprender o de hacer la grid responsiva en movil :( */
 
 /*About Us*/
 
-.aboutMe{
+.aboutMe {
     display: flex;
     height: 90vh;
     max-width: 100%;
     padding: 0px 10vw;
     gap: 5%;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.9);
-    background-image: url(images/houseBg.png);
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(images/houseBg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.aboutMe .textContainer{
+.aboutMe .textContainer {
     display: flex;
     flex-direction: column;
-    padding: 0px 0vw;
+    padding: 0 0vw;
     gap: 10%;
     max-height: 40%;
     text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 
-.aboutMe .textContainer h1{
+.aboutMe .textContainer h1 {
     font-size: 10em;
     color: white;
 }
-.aboutMe .textContainer h2{
+
+.aboutMe .textContainer h2 {
     font-size: 6em;
     color: white;
 }
-.aboutMe .textContainer p{
+
+.aboutMe .textContainer p {
     font-size: 1.5em;
     color: white;
 }
 
-
-.aboutMe img{
+.aboutMe img {
     max-width: 40%;
     height: auto;
     border-radius: 20px;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1 / 1;
+}
+
+/* Blog */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+.blog-card {
+    background-color: rgb(196, 250, 196);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.blog-card h1 {
+    font-size: 1.5rem;
+}
+
+.blog-card p {
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+/* Standby */
+
+.standBy {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 95vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(images/standBy.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.standBy h1 {
+    color: white;
+    text-align: center;
+    font-size: 6rem;
 }
 
 /*Common stuff*/
@@ -535,20 +610,26 @@ button:hover {
     transform: scale(1.05);
 }
 
-@media (min-width: 1000px) {
+@media (max-width: 900px) {
     .container {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .standBy h1 {
+        font-size: 4rem;
+
     }
 }
 
 @media (max-width: 600px) {
 
-    body{
+    body {
         max-width: 600px;
     }
-    .welcome{
+
+    .welcome {
         padding: 20px 5%;
-        gap: 10px; 
+        gap: 10px;
     }
 
     .salmonCollage {
@@ -558,70 +639,90 @@ button:hover {
         right: 0;
         height: 250px;
         z-index: 0;
-      }
-    
-      .welcomebuttons {
+    }
+
+    .welcomebuttons {
         position: relative;
         z-index: 1;
         padding-top: 50px;
-      }
-    
-      .collageImg1 {
+    }
+
+    .collageImg1 {
         top: 0;
         left: 0;
-      }
-      .collageImg2 {
+    }
+
+    .collageImg2 {
         top: 100px;
         left: 50px;
-      }
-      .collageImg3 {
+    }
+
+    .collageImg3 {
         top: 50px;
         left: 85px;
         transform: rotate(15deg) scale(1.2);
-      }
+    }
 
-      .collageImg1,
-      .collageImg2,
-      .collageImg3 {
+    .collageImg1,
+    .collageImg2,
+    .collageImg3 {
         max-width: 150px;
-      }
+    }
 
-    .catalogue{
+    .catalogue {
         padding: 10px 0px;
         gap: 25px;
         max-width: 600px;
     }
 
+        .menu-icon {
+        display: flex;
+        z-index: 1001;
+    }
+
+    .headerContainer {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #8ecf8e;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        z-index: 1000;
+
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    #menu-toggle:checked ~ .headerContainer {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
     .navbar {
-        display: flex;
         flex-direction: row;
+        align-items: center;
         justify-content: space-between;
-        padding: 40px 30px;
-        background-color: rgb(196, 250, 196);
-        width: 100%;
+        position: relative;
+        overflow: visible;
     }
 
-    #header .navbar .headerContainer{
-        display: none;
-        
-    }
-    
-    .navbar div ul {
-        display: flex;
-        gap: 20px;
-        font-size: 12px;
-    }
-    
-    .navbar img {
+    #cartIcon {
         display: none;
     }
 
-    .FAQ{
+    .FAQ {
         max-width: 90%;
         margin: 50px;
         gap: 15px;
     }
-    
+
     h1 {
         font-size: 28px;
         text-align: center;
@@ -733,5 +834,58 @@ button:hover {
 
     .bullet p {
         font-size: 16px;
+    }
+
+    /* About Us*/
+    .aboutMe {
+        flex-direction: column;
+        padding: 2rem 5vw;
+        gap: 2rem;
+    }
+
+    .aboutMe .textContainer {
+        max-height: none;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .aboutMe .textContainer h1 {
+        font-size: 3.5em;
+    }
+
+    .aboutMe .textContainer h2 {
+        font-size: 2.5em;
+    }
+
+    .aboutMe .textContainer p {
+        font-size: 1rem;
+    }
+
+    .aboutMe img {
+        max-width: 80%;
+        border-radius: 15px;
+    }
+
+    /* Blog */
+    .blog-grid {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .blog-card {
+        padding: 1rem;
+    }
+
+    .blog-card h1 {
+        font-size: 1.2rem;
+    }
+
+    .blog-card p {
+        font-size: 0.95rem;
+    }
+
+    .standBy h1 {
+        font-size: 3rem;
     }
 }
